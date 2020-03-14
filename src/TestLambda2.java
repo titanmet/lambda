@@ -34,5 +34,13 @@ public class TestLambda2 {
 
         System.out.println(list);
 
+        Comparator<String> comparator = (o1,o2) -> {
+            if(o1.length() > o2.length()) return 1;
+            else if (o1.length() < o2.length()) return -1;
+            else return 0;
+        };
+        list.sort(comparator);
+
+        System.out.println(list);
     }
 }
